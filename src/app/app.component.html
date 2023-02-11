@@ -37,6 +37,9 @@
   </div>
   
   <div>
+    <div class="mt-5">
+      <p>Math method: {{ ramCap|json }}</p>
+    </div>
     <div class="ram col-8 mt-5">
       <h1>RAM</h1>
         <div *ngFor="let task of ramCap; let i=index">
@@ -45,7 +48,4 @@
         </div>
     </div>
   </div>
-</div>
-<div class="mt-5">
-  <h1>Math method: {{ ramCap|json }}</h1>
 </div>
