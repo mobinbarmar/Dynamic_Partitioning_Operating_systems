@@ -44,7 +44,7 @@
       <h1>RAM</h1>
         <div *ngFor="let task of ramCap; let i=index">
           <div *ngIf="task == 1" class="ram-fill" (click)="deleteTask(i)"></div>
-          <div *ngIf="task == 0" class="ram-empty"></div>
+          <div *ngIf="task == 0" class="ram-empty" (click)="updateTask(i)"></div>
         </div>
     </div>
   </div>

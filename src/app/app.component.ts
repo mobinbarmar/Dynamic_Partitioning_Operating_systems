@@ -34,8 +34,6 @@ export class AppComponent {
       tStart: 0,
       tEnd: +tCap
     }
-    console.log(this.ramCap);
-
     for (let i = 0; i < this.ramCap.length; i++) {
       if(this.ramCap[i] == 0){
         task.tStart = i
@@ -58,5 +56,9 @@ export class AppComponent {
 
   deleteTask(i:number){
     this.ramCap[i] = 0
+  }
+
+  updateTask(i:number){
+    this.ramCap[i] = 1
   }
 }
