@@ -1,0 +1,51 @@
+<div class="container mt-5 d-flex f-col justify-content-between">
+  <div class="container d-flex f-col">
+    <div>
+      <div>
+        <label for="">RAM size (kb)</label>
+        <input type="text" class="form-control" #lramCap>
+      </div>
+  
+      <div>
+        <label for="">Task</label>
+        <input type="text" class="form-control" #ltName>
+      </div>
+  
+      <div>
+        <label for="">Task size (kb)</label>
+        <input type="text" class="form-control" #ltCap>
+      </div>
+  
+      <button (click)="createRam(lramCap.value, ltName.value, ltCap.value)"
+       [disabled]="!creatFlag" class="btn btn-success mt-2">Create RAM</button>
+    </div>
+  
+  
+    <div class="ms-5">
+      <div>
+        <label for="">Task</label>
+        <input type="text" class="form-control" #ltNameNew>
+      </div>
+  
+      <div>
+        <label for="">Size (kb)</label>
+        <input type="text" class="form-control" #ltCapNew>
+      </div>
+  
+      <button (click)="addTask(ltNameNew.value, ltCapNew.value)" class="btn btn-info mt-2">Add New Task</button>
+    </div>  
+  </div>
+  
+  <div>
+    <div class="ram col-8 mt-5">
+      <h1>RAM</h1>
+        <div *ngFor="let task of ramCap; let i=index">
+          <div *ngIf="task == 1" class="ram-fill" (click)="deleteTask(i)"></div>
+          <div *ngIf="task == 0" class="ram-empty"></div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="mt-5">
+  <h1>Math method: {{ ramCap|json }}</h1>
+</div>

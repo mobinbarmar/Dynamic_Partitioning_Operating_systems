@@ -1,0 +1,16 @@
+.ram {
+    border: 1px solid black;
+    width: 300px;
+}
+.ram-fill{
+    background-color: lightgreen;
+    height: 20px;
+    width: 100%;
+    border: 1px solid;
+}
+.ram-empty{
+    background-color: white;
+    height: 20px;
+    width: 100%;
+    border: 1px solid;
+}
